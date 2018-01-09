@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <title>Shopping List</title>
+</head>
+<body>
+<div class="container">
+    <h2>My Shopping List</h2>
+    <div class="input-group">
+        <input placeholder="add shopping list item" type="text" class="js-new-item form-control">
+        <span class="input-group-btn">
+            <button @click="addItem" class="js-add btn btn-default" type="button">Add!</button>
+        </span>
+    </div>
+    <ul>
+        <li>
+            <div class="checkbox">
+                <label>
+                    <input class="js-item" name="list" type="checkbox"> Carrot
+                </label>
+            </div>
+        </li>
+        <li>
+            <div class="checkbox">
+                <label>
+                    <input class="js-item" name="list" type="checkbox"> Book
+                </label>
+            </div>
+        </li>
+        <li class="removed">
+            <div class="checkbox">
+                <label>
+                    <input class="js-item" name="list" type="checkbox" checked> Gift for aunt's birthday
+                </label>
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
