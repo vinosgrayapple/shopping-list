@@ -1,14 +1,25 @@
 /*jshint esversion: 6 */
 
 var data = {
-  items: [
-    { text: "Bananas", checked: false },
-    { text: "Apples", checked: false },
-    { text: "Kiwi", checked: false },
-    { text: "Pineapple", checked: true }
-  ],
-  title: "Список Сотрудников AW",
-  newItem: ""
+    items: [{
+            text: "Bananas",
+            checked: false
+        },
+        {
+            text: "Apples",
+            checked: false
+        },
+        {
+            text: "Kiwi",
+            checked: false
+        },
+        {
+            text: "Pineapple",
+            checked: true
+        }
+    ],
+    title: "Список Сотрудников AW",
+    newItem: ""
 };
 
 /* 
@@ -33,10 +44,10 @@ var ItemsComponent = Vue.extend({
     `
 });
 var ChangeTitleComponent = Vue.extend({
-  data: function() {
-    return data;
-  },
-  template: `<input v-model="title">`
+    data: function () {
+        return data;
+    },
+    template: `<input v-model="title">`
 });
 var AddItemComponent = Vue.extend({
   data: function() {
@@ -51,13 +62,13 @@ var AddItemComponent = Vue.extend({
           text: text,
           checked: false
         });
-        this.newItem = '';
+        this.newItem = "";
       }
     }
   },
   template: `
          <div class="input-group">
-            <input @keyup.enter="addItem" placeholder="add shopping list item" type="text" class="js-new-item form-control">
+            <input @keyup.enter="addItem" v-model="newItem" placeholder="add shopping list item" type="text" class="js-new-item form-control">
             <span class="input-group-btn">
                 <button @click="addItem" class="js-add btn btn-default" type="button">Add!</button>
             </span>
